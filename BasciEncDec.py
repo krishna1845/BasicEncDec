@@ -1,17 +1,18 @@
+#encryption Function
 def encrypt(msg, key):
   msg = list(msg)
   for i in range(len(msg)):
     msg[i] = chr(ord(msg[i]) + i + key)
   return "".join(msg)
 
-
+#decryption Function
 def decrypt(msg, key):
   msg = list(msg)
   for i in range(len(msg)):
     msg[i] = chr(ord(msg[i]) - i - key)
   return "".join(msg)
 
-
+#main to take input
 s = str(input("enter the message: "))
 n = len(s)
 key = input("enter key: ")
